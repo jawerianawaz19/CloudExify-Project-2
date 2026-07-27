@@ -1,5 +1,6 @@
 # grade_system.py
-# CloudExify Python Internship - Month 1 Project 2 (With Bonus Features)
+#BONUS FUNCTIONALITIES
+# Name: Jaweria nawaz Reg no: CX-INT-2026-PY-0119
 
 import csv
 import os
@@ -126,7 +127,7 @@ def class_report():
         letter = get_grade_letter(avg)
         print(f"  {rank}. {name:<20} {avg:.2f}  ({letter})")
 
-    # BONUS: subject-wise class average
+    
     print("\n--- SUBJECT-WISE CLASS AVERAGE ---")
     for sub in SUBJECTS:
         sub_scores = [s["grades"].get(sub, 0) for s in students]
@@ -181,7 +182,7 @@ def individual_report_card():
     report_text = "\n".join(lines)
     print("\n" + report_text)
 
-    # BONUS: export report as text file
+    
     save_choice = input("\nExport this report as .txt file? (y/n): ").strip().lower()
     if save_choice == "y":
         filename = f"report_{target['name'].replace(' ', '_')}.txt"
